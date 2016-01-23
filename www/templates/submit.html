@@ -1,0 +1,44 @@
+<ion-view view-title="Submit">
+  <ion-content padding="true">
+    <h3 class="spacer">Fill Out the Form Below</h3>
+    <form ng-submit="newItem(item)" name="$parent.submitForm" id="submitForm">
+      <div class="spacer">&nbsp;</div>
+      <ion-list>
+<<<<<<< HEAD
+        <label for="media" class="item item-input"> <img ng-model="item.media" ng-src="{{itemPic}}" ng-value="media" width="50%" />
+=======
+        <label for="{{media}}" class="item item-input"> <img ng-model="item.media" ng-src="{{media}}" ng-value="media" width="50%" />
+>>>>>>> ebcbeta/master
+          <input id="media" name="media" type="text" ng-model="item.pic = itemPic" />
+        </label> 
+        <label for="name" class="item item-input item-floating-label"><span class="input-label">Title Card / Flyer</span>
+          <input id="title" name="title" type="text" placeholder="The Title" ng-model="item.name" />
+        </label>
+        <div class="spacer">&nbsp;</div>
+        <label for="address" class="item item-input item-floating-label"><span class="input-label">Address</span>
+          <input id="address" name="address" type="text" placeholder="The Address" ng-model="item.address" />
+        </label>
+        <div class="spacer">&nbsp;&nbsp;</div>
+        <label for="phone" class="item item-input item-floating-label"><span class="input-label">Phone Number</span>
+          <input id="phone" name="phone" type="tel" placeholder="The Phone" ng-model="item.phone" />
+        </label>
+        <div class="spacer">&nbsp;</div>
+        <label for="desc" class="item item-input item-floating-label"><span class="input-label">Other Info</span>
+          <textarea class="desc" id="desc" name="desc" type="text" placeholder="Details" ng-model="item.desc"></textarea>
+        </label>
+      </ion-list>
+      <div class="spacer">&nbsp;</div>
+      <div class="addItem">
+        <button class="button button-box button-assertive" type="reset">Reset</button>
+        <button class="button button-box button-calm" type="submit">Submit</button>
+      </div>
+    </form>
+  </ion-content>
+  <ion-footer-bar class="passFoot" padding="true">
+    <caption>&copy;2015 by EBC Electionic Business Card</caption>
+    <div side="right">
+      <button class="button button-stable button-clear" ng-click="uploader()"><span class="icon assertive ion-android-upload"></span>
+      </button>
+    </div>
+  </ion-footer-bar>
+</ion-view>
