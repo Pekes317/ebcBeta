@@ -1,0 +1,63 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.cordova.plugins.sms": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "com.mohamnag.inappbilling": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-email": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "de.appplant.cordova.plugin.printer": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        }
+    },
+    "dependent_plugins": {}
+}

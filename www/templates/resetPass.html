@@ -1,0 +1,25 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm" padding="true">
+    <h1 class="title">Reset Password</h1>
+    <button id="close" name="close" class="button button-clear icon ion-android-cancel" ng-click="close(1)"></button>
+  </ion-header-bar>
+  <ion-content padding="true" has-header="true">
+    <div class="spacer">&nbsp;</div>  
+    <h2>Provide Email</h2>
+    <form id="resetPass" name="resetPass" class="resetField" ng-submit="getNewPass(user)">
+      <ion-list>
+        <ion-item>
+          <label for="email" class="item item-md-label item-input restPass"><span class="input-label">Your Username</span>
+            <input id="email" name="email" type="email" placeholder="Your Email" ng-model="user.email" />
+          </label>
+        </ion-item>
+        <ion-item>
+          <button class="button button-block button-calm" type="submit">Request a Password Reset</button>
+        </ion-item>
+      </ion-list>
+    </form>
+  </ion-content>
+  <ion-footer-bar class="passFoot" padding="true">
+    <caption>&copy;2015 by EBC Electionic Business Card</caption>
+  </ion-footer-bar>
+</ion-modal-view>

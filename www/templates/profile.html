@@ -1,0 +1,107 @@
+<ion-view title="Profile">
+  <ion-tabs class="tabs-striped tabs-calm tabs-icon-top">
+    <ion-tab title="My Profile" icon="ion-android-person">
+      <ion-content padding="true" class="has-header">
+        <div>
+          <div class="proHeader" style="background-image: url({{person.pic}});">
+            <div class="userImg"><img ng-src="{{person.pic}}" />
+              <h4 class="light">{{person.firstName}} {{person.lastName}}</h4>
+            </div>
+          </div>
+          <div class="dark proBar">
+            <div class="button-bar">
+              <button class="button"><i class="button-icon"></i></button>
+              <button class="button"><i class="button-icon"></i></button>
+              <button class="button" ng-click="change()"><i class="button-icon"></i></button>
+            </div>
+          </div>
+          <ion-list class="proList">
+            <ion-item class="inline">
+              <strong>Email/Username:&emsp;</strong><span>{{person.email}}</span>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-content>
+    </ion-tab>
+    <ion-tab title="Edit Profile" icon="ion-android-options">
+      <ion-content padding="true" class="has-header">
+        <div>
+          <div class="proHeader" style="background-image: url({{person.pic}});">
+            <div class="userImg"><img ng-src="{{person.pic}}" />
+              <h4 class="light">{{person.firstName}} {{person.lastName}}</h4>
+            </div>
+          </div>
+          <div class="dark proBar">
+            <div class="button-bar">
+              <button class="button" ng-click="uploader()"><i class="button-icon ion-images"></i></button>
+              <button class="button" ng-click="passUpdate()"><i class="button-icon ion-lock-combination"></i></button>
+              <button class="button" ng-click="upProfile(us)"><i class="button-icon ion-android-refresh"></i></button>
+            </div>
+          </div>
+          <ion-list class="proList">
+<<<<<<< HEAD
+            <form name="proForm" id="proForm">
+              <ion-item class="inline">
+                <label class="item item-input"><strong>First Name:&ensp;</strong>
+                  <input name="firstName" placeholder="{{person.firstName}}" ng-model="us.firstName" type="text" />
+                </label>
+                <label class="item item-input"><strong>Last Name:&ensp;</strong>
+                  <input name="lastName" placeholder="{{person.lastName}}" ng-model="us.lastName" type="text" />
+                </label>
+              </ion-item>
+              <ion-item>
+                <label class="item item-input"><strong>Email/Username:&emsp;</strong>
+                  <input name="email" placeholder="{{person.email}}" ng-model="us.email" type="email" />
+                </label>
+              </ion-item>
+              <label for="media" class="item item-input"><img ng-src="{{itemPic}}" height="" />
+                <input id="media" name="media" type="text" ng-model="us.pic = itemPic" />
+              </label>
+            </form>
+=======
+            <ion-item class="inline">
+              <label class="item item-input"><strong>First Name:&ensp;</strong>
+                <input name="firstName" ng-model="us.firstName" placeholder="{{person.firstName}}" ng-change="chnage()" type="text" />
+              </label>
+              <label class="item item-input"><strong>Last Name:&ensp;</strong>
+                <input name="lastName" ng-model="us.lastName" placeholder="{{person.lastName}}" type="text" />
+              </label>
+            </ion-item>
+            <ion-item>
+              <label class="item item-input"><strong>Email/Username:&emsp;</strong>
+                <input name="email" ng-model="us.email" placeholder="{{person.email}}" type="email" />
+              </label>
+            </ion-item>
+>>>>>>> ebcbeta/master
+            <hr />
+            <ion-item>
+              <label class="item item-input"><strong>Old Password:&emsp;</strong>
+                <input name="oldPass" placeholder="Current Password" ng-model="password.current" type="password" />
+              </label>
+<<<<<<< HEAD
+            </ion-item>
+            <ion-item class="inline">
+              <label class="item item-input"><strong>New:&nbsp;</strong>
+                <input name="newPass" placeholder="New Password" ng-model="password.new" type="password" />
+              </label>
+              <label class="item item-input"><strong>Verify:&nbsp;</strong>
+                <input name="verPass" placeholder="Verify Password" ng-model="password.check" type="password" />
+              </label>
+=======
+              <div class="inline">
+                <label class="item item-input"><strong>New:&nbsp;</strong>
+                  <input name="newPass" placeholder="New Password" ng-model="password.new" type="password" />
+                </label>
+                <label class="item item-input"><strong>Verify:&nbsp;</strong>
+                  <input name="verPass" placeholder="Verify Password" ng-model="password.verify" type="password" />
+                </label>
+              </div>
+>>>>>>> ebcbeta/master
+            </ion-item>
+          </ion-list>
+        </div>
+        <h2 class="edit light ion-android-create"></h2>
+      </ion-content>
+    </ion-tab>
+  </ion-tabs>
+</ion-view>

@@ -1,0 +1,63 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.cordova.plugins.sms": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "com.mohamnag.inappbilling": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-email": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "EBC: Electionic Business Card"
+        }
+    },
+    "dependent_plugins": {}
+}

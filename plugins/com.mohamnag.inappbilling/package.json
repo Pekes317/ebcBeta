@@ -1,0 +1,24 @@
+{
+    "version": "0.0.3",
+    "name": "com.mohamnag.inappbilling",
+    "cordova_name": "Multiplatform InAppBilling",
+    "description": "\n        This plugin targets in app purchasing for PlayStore in-app billing \n        API v3 and StoreKit on iOS >= 7 providing a unified JavaScript interface \n        in order to make it possible having one JavaScript code which works with \n        both stores.\n\n        Refer to wiki (https://github.com/mohamnag/InAppBilling/wiki) for \n        introduction and instructions on using this plugin.\n    ",
+    "license": "MIT",
+    "keywords": [
+        "billing",
+        "in-app",
+        "inapp",
+        "purchase",
+        "credit"
+    ],
+    "platforms": [
+        "ios",
+        "android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

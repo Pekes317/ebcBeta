@@ -1,0 +1,14 @@
+<ion-view cache-view="false" view-title="My Cards / Flyers">
+   <ion-content padding="true">
+      <ion-list class="list card ink" ng-repeat="card in cards">
+         <ion-item class="item-thumbnail-right single" href="#/app/cards/{{card.id}}">
+            <img alt="{{card.name}}" ng-src="{{card.pic}}" />
+            <h3>{{card.name}}</h3>
+            <div>{{card.desc}}</div>
+         </ion-item>
+      </ion-list>
+   </ion-content>
+   <ion-footer-bar class="passFoot" padding="true">
+      <caption>&copy;2015 by EBC Electionic Business Card</caption>
+   </ion-footer-bar>
+</ion-view>

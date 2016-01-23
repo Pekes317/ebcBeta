@@ -1,0 +1,1 @@
+angular.module('ebc.constants', ['backand', 'ngCookies'])

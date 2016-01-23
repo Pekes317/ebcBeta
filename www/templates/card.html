@@ -1,0 +1,22 @@
+<ion-view view-title="Hello, {{person.firstName}}" >
+  <ion-content padding="true">
+    <div class="list card" padding="true">
+        <div class="item item-header">
+            <h1>{{item.name}}</h1>
+        </div>
+        <div class="item item-body">
+            <img ng-click="openItem()" class="docHeight" alt="{{item.name}}" ng-src="{{item.pic}}" />
+            <p>{{item.desc}}</p>
+        </div>
+        <div class="button-bar">
+            <button class="button" ng-click="open(2)"><i class="button-icon ion-android-textsms"></i></button>
+            <button class="button" ng-click="pickSend()"><i class="button-icon ion-android-contacts"></i></button>
+            <button class="button" ng-click="open(3)"><i class="button-icon ion-android-mail"></i></button>
+        </div>
+    </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="passFoot" padding="true">
+    <caption>&copy;2015 by EBC Electionic Business Card</caption>
+  </ion-footer-bar>     
+</ion-view>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.mohamnag.inappbilling"
+    version="0.0.3">
+
+    <name>Multiplatform InAppBilling</name>
+    <description>
+        This plugin targets in app purchasing for PlayStore in-app billing 
+        API v3 and StoreKit on iOS >= 7 providing a unified JavaScript interface 
+        in order to make it possible having one JavaScript code which works with 
+        both stores.
+
+        Refer to wiki (https://github.com/mohamnag/InAppBilling/wiki) for 
+        introduction and instructions on using this plugin.
+    </description>
+    <license>MIT</license>
+    <keywords>billing,in-app,inapp,purchase,credit</keywords>
+    <author>Mohammad Naghavi - mohamnag@gmail.com</author>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+	
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/inappbilling.js" name="InAppBilling">
+            <clobbers target="inappbilling" />
+        </js-module>
+                            
+        <!-- Cordova 2.5+ -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="InAppBillingPlugin">
+                <param name="ios-package" value="InAppPurchase"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/InAppPurchase.h" />
+        <source-file src="src/ios/InAppPurchase.m" />
+        <header-file src="src/ios/SKProduct+LocalizedPrice.h" />
+        <source-file src="src/ios/SKProduct+LocalizedPrice.m" />
+
+        <framework src="StoreKit.framework" />
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/inappbilling.js" name="InAppBilling">
+            <clobbers target="inappbilling" />
+        </js-module>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <!-- InApp Billing Permission -->
+            <uses-permission android:name="com.android.vending.BILLING" />
+        </config-file>
+
+        <!--
+        updated until here!
+        TODO update the rest when finished with rest of code.    
+
+        http://cordova.apache.org/docs/en/3.4.0/plugin_ref_spec.md
+        -->
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <!--TODO change this name if you want a unified service name for cordova.exec in both android and ios-->
+            <feature name="InAppBillingPlugin">   
+                <!--TODO change this value when the name of java package/class has been changed-->
+                <param name="android-package" value="com.mohamnag.inappbilling.InAppBillingPlugin"/>
+            </feature>
+        </config-file>
+        
+        <!-- IAB service interface -->
+        <source-file src="src/android/com/android/vending/billing/IInAppBillingService.aidl" target-dir="src/com/android/vending/billing" />
+
+        <!-- cordova plugin src files -->
+        <source-file src="src/android/com/mohamnag/inappbilling/InAppBillingPlugin.java" target-dir="src/com/mohamnag/inappbilling" />
+        <source-file src="src/android/com/mohamnag/inappbilling/Error.java" target-dir="src/com/mohamnag/inappbilling" />
+
+
+        <!-- the code from marketbilling example: https://code.google.com/p/marketbilling/ -->
+        <source-file src="src/android/com/mohamnag/inappbilling/helper/Purchase.java" target-dir="src/com/mohamnag/inappbilling/helper/" />
+        <source-file src="src/android/com/mohamnag/inappbilling/helper/Base64.java" target-dir="src/com/mohamnag/inappbilling/helper/" />
+        <source-file src="src/android/com/mohamnag/inappbilling/helper/Base64DecoderException.java" target-dir="src/com/mohamnag/inappbilling/helper/" />
+        <source-file src="src/android/com/mohamnag/inappbilling/helper/Inventory.java" target-dir="src/com/mohamnag/inappbilling/helper/" />
+        <source-file src="src/android/com/mohamnag/inappbilling/helper/Security.java" target-dir="src/com/mohamnag/inappbilling/helper/" />
+        <source-file src="src/android/com/mohamnag/inappbilling/helper/SkuDetails.java" target-dir="src/com/mohamnag/inappbilling/helper/" />
+    </platform>
+</plugin>

@@ -1,0 +1,32 @@
+<ion-view>
+  <ion-header-bar class="bar bar-calm">
+    <h1 class="title">Login</h1>
+  </ion-header-bar>
+  <ion-content has-header="true" padding="true">
+    <form class="login" id="loginForm" name="loginForm" novalidate ng-submit="login.signin()">
+      <div class="spacer spacer-big">&nbsp;</div>
+      <ion-list>
+        <ion-item>
+          <label for="email" class="item item-md-label item-input"> <span class="input-label">Username</span>
+            <input id="email" name="email" type="email" placeholder="Your Email" ng-model="login.email" />
+          </label>
+          <ng-messages for="loginForm.email.$error">
+            <ng-messages-include class="formError" src="templates/errorMess.html"></ng-messages-include>
+          </ng-messages>
+        </ion-item>
+        <ion-item>  
+        <label for="password" class="item item-md-label item-input"> <span class="input-label">Password</span>
+          <input id="password" name="password" type="password" placeholder="Your Password" ng-model="login.password" />
+        </label>
+        </ion-item>
+        <div class="spacer spacer-big">&nbsp;</div>
+        <button class="button button-block button-calm" type="submit">Log in</button>
+      </ion-list>
+    </form>
+    <button class="button button-calm button-clear button-block" ng-click="login.bypass()">Or create an account</button>
+  </ion-content>
+  <ion-footer-bar class="passFoot" padding="true">
+    <button class="button button-clear button-icon icon button-stable" ng-click="open(1)"><i class="assertive icon ion-unlocked"></i></button>
+    <caption class="copyRight">&copy;2015 by EBC Electionic Business Card</caption>
+  </ion-footer-bar>
+</ion-view>

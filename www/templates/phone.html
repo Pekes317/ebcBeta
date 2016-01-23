@@ -1,0 +1,36 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm" padding="true">
+    <h1 class="title">Choose a Number For SMS</h1>
+    <button id="close" name="close" class="button button-clear icon ion-android-cancel" ng-click="close(2)"></button>
+  </ion-header-bar>
+  <ion-content padding="true" has-header="true">
+    <div class="spacer">&nbsp;</div>
+    <div class="sendMod">
+	  <h2>{{sendee.name}}'s Number(s)</h2>
+	</div>
+    <form id="resetPass" name="resetPass" class="resetField">
+      <ion-list>
+        <ion-item>
+            <ion-radio name="numbers" ng-repeat="item in phSend" ng-model="sendee.number" ng-value="item.value" ng-change="">{{item.type}}: {{item.value}}</ion-radio>
+        </ion-item>
+		<div class="sendMod">You Chose: {{sendee.number}}</div>
+        <ion-item>
+<<<<<<< HEAD
+            <label for="subject"  class="item item-input sub"><strong>Message:&emsp;</strong>
+                <input name="subjects" ng-model="sendee.sub" type="text" />
+=======
+            <label for="msg"  class="item item-input sub"><strong>Message:&emsp;</strong>
+                <input name="msg" ng-model="sendee.msg" type="text" />
+>>>>>>> ebcbeta/master
+            </label>
+        </ion-item>
+        <ion-item>
+          <button class="button button-block button-calm" ng-click="smsSend()">Select Number</button>
+        </ion-item>
+      </ion-list>
+    </form>
+  </ion-content>
+  <ion-footer-bar class="passFoot" padding="true">
+    <caption>&copy;2015 by EBC Electionic Business Card</caption>
+  </ion-footer-bar>
+</ion-modal-view>
