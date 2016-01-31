@@ -6,20 +6,6 @@
   <ion-content padding="true" has-header="true">
     <div class="spacer">&nbsp;</div>
     <div class="sendMod">
-<<<<<<< HEAD
-	  <h2>{{sendee.name}}'s Email(s)</h2>
-	</div>
-    <form>
-      <ion-list>
-        <ion-item>
-            <ion-radio name="email" ng-repeat="item in emSend" ng-model="sendee.email" ng-value="item.value" ng-change="">{{item.type}}: {{item.value}}</ion-radio>
-        </ion-item>
-		<div class="sendMod">You Chose: {{sendee.email}}</div>
-        <ion-item>
-          <label for="subject"  class="item item-input sub"><strong>Subject:&emsp;</strong>
-                <input name="subjects" ng-model="sendee.sub" type="text" />
-            </label>
-=======
       <h2>{{sendee.name}}'s Email(s)</h2>
     </div>
     <form>
@@ -37,7 +23,6 @@
           <label for="msg" class="item item-input sub"><strong>Message:&emsp;</strong>
             <input name="msg" ng-model="sendee.msg" type="text" />
           </label>
->>>>>>> ebcbeta/master
         </ion-item>
         <ion-item>
           <button class="button button-block button-calm" ng-click="emailSend()">Select Email</button>

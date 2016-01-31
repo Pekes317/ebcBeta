@@ -4,11 +4,7 @@
     <form ng-submit="newItem(item)" name="$parent.submitForm" id="submitForm">
       <div class="spacer">&nbsp;</div>
       <ion-list>
-<<<<<<< HEAD
-        <label for="media" class="item item-input"> <img ng-model="item.media" ng-src="{{itemPic}}" ng-value="media" width="50%" />
-=======
         <label for="{{media}}" class="item item-input"> <img ng-model="item.media" ng-src="{{media}}" ng-value="media" width="50%" />
->>>>>>> ebcbeta/master
           <input id="media" name="media" type="text" ng-model="item.pic = itemPic" />
         </label> 
         <label for="name" class="item item-input item-floating-label"><span class="input-label">Title Card / Flyer</span>

@@ -54,9 +54,15 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
     });
   };
 
-  $scope.sampleCard = 'http://goo.gl/8gRvkX';
+  $scope.sampleCard = {
+    svg: 'http://ebc.beezleeart.com/docs/samples/cory.svg',
+    img: 'https://goo.gl/8gRvkX'
+  };
 
-  $scope.sampleFly = 'http://goo.gl/mrPCX5';
+  $scope.sampleFly = {
+    svg: 'http://ebc.beezleeart.com/docs/samples/chucky.svg',
+    img: 'https://goo.gl/UnPn5u'
+  };
 
   $scope.sampleMsg = function (index) {
     var msgPop = null;
@@ -126,6 +132,12 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
 })
 
 .controller('DashCtrl', function ($scope, $state, $window, $timeout, $cordovaFileTransfer, $cordovaCamera, $ionicLoading, $ionicPopup, $ionicPlatform, $ionicPopover, $ionicActionSheet, $http, Backand, FileManager, UserModel, CurrentUser, LoginService, ItemsModel) {
+  $scope.currentUser = function () {
+    $scope.$on('$ionicView.enter', function () {
+
+    });
+  };
+
   $ionicPopover.fromTemplateUrl('templates/submitMenu.html', {
     scope: $scope
   }).then(function (popover) {
@@ -524,7 +536,7 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
   });
 })
 
-.run(function ($rootScope, $state, $ionicHistory, $ionicGesture, $cordovaInAppBrowser, LoginService, Backand, FileManager, CurrentUser, UserModel) {
+.run(function ($rootScope, $state, $ionicGesture, $ionicHistory, $cordovaInAppBrowser, LoginService, Backand, FileManager, CurrentUser, UserModel) {
 
   function unauthorized() {
     console.log("user is unauthorized, sending to login");
@@ -546,18 +558,30 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
     unauthorized();
   });
 
-  $rootScope.$on('$cordovaInAppBrowser:exit', function (e, event) {
-    $cordovaInAppBrowser.close();
+  $rootScope.$on('$ionicView.enter', function () {
+    CurrentUser.getUser().then(function (id) {
+      UserModel.fetch(id).then(function (obj) {
+        $rootScope.person = obj.data;
+      })
+    })
+    var prod = document.getElementById('prod');
+
+    if (!prod) {
+      console.log('not here');
+    } else {
+      var ebc = document.getElementById('prod').contentDocument;
+      ebc.addEventListener('click', function (e) {
+        var url = e.target.parentNode.href.animVal;
+        e.preventDefault();
+
+        $cordovaInAppBrowser.open(url, '_system');
+      });
+
+    };
   });
 
-  $rootScope.$on('$ionicView.loaded' && 'authorized', function () {
-    CurrentUser.getUser().then(function (id) {
-      b
-      $rootScope.user = id;
-      UserModel.fetch(id).then(function (p) {
-        $rootScope.person = p.data;
-      });
-    });
+  $rootScope.$on('$cordovaInAppBrowser:exit', function (e, event) {
+    $cordovaInAppBrowser.close();
   });
 
   $rootScope.$on('$stateChangeSuccess', function (event, toState) {

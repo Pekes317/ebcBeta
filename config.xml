@@ -5,8 +5,9 @@
   <author email="hi@ionicframework" href="http://ionicframework.com/">EBC: Electionic Business Card</author>
   <content src="index.html" />
   <access origin="*" />
-  <access origin="tel:" launch-external="yes" />
-  <access origin="mailto:" launch-external="yes" />
+  <access origin="tel:*" />
+  <access origin="mailto:*" />
+  <access origin="*//ebc.beezleeart.com/*" />
   <vs:features />
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true" />
