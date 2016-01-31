@@ -54,18 +54,9 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
     });
   };
 
-  $scope.sampleCard = "https://goo.gl/8gRvkX";
+  $scope.sampleCard = 'http://goo.gl/8gRvkX';
 
-  $scope.sampleFly = "https://goo.gl/UnPn5u";
-
-  $scope.sampleItems = function () {
-    if ($state.current.name == 'app.card') {
-      $cordovaInAppBrowser.open('http://goo.gl/RKhY5J', '_blank');
-    };
-    if ($state.current.name == 'app.flyer') {
-      $cordovaInAppBrowser.open('http://goo.gl/vqwQev', '_blank');
-    };
-  };
+  $scope.sampleFly = 'http://goo.gl/mrPCX5';
 
   $scope.sampleMsg = function (index) {
     var msgPop = null;
@@ -551,40 +542,22 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
     $state.go('signup');
   }
 
-
   $rootScope.$on('unauthorized', function () {
     unauthorized();
   });
 
-  $rootScope.$on('$cordovaInAppBrowser:loadstop', function (e, event) {
-
-    $cordovaInAppBrowser.executeScript({
-      file: 'browserClicks.js'
-    });
-  });
-  
   $rootScope.$on('$cordovaInAppBrowser:exit', function (e, event) {
     $cordovaInAppBrowser.close();
   });
 
   $rootScope.$on('$ionicView.loaded' && 'authorized', function () {
     CurrentUser.getUser().then(function (id) {
+      b
       $rootScope.user = id;
       UserModel.fetch(id).then(function (p) {
         $rootScope.person = p.data;
       });
     });
-    console.log('I am Loaded');
-  });
-
-  $rootScope.$on('$ionicView.loaded', function () {
-    CurrentUser.getUser().then(function (id) {
-      $rootScope.user = id;
-      UserModel.fetch(id).then(function (p) {
-        $rootScope.person = p.data;
-      });
-    });
-    console.log('I am Loaded');
   });
 
   $rootScope.$on('$stateChangeSuccess', function (event, toState) {
