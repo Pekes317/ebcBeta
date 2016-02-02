@@ -458,11 +458,6 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
     $scope.item = item.data;
   });
 
-
-  $scope.openItem = function () {
-    $cordovaInAppBrowser.open($scope.item.media, '_blank')
-  };
-
   $scope.sendee = {
     name: 'Contact',
     sub: 'Check Out My EBC Card/Flyer',
