@@ -132,12 +132,6 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
 })
 
 .controller('DashCtrl', function ($scope, $state, $window, $timeout, $cordovaFileTransfer, $cordovaCamera, $ionicLoading, $ionicPopup, $ionicPlatform, $ionicPopover, $ionicActionSheet, $http, Backand, FileManager, UserModel, CurrentUser, LoginService, ItemsModel) {
-  $scope.currentUser = function () {
-    $scope.$on('$ionicView.enter', function () {
-
-    });
-  };
-
   $ionicPopover.fromTemplateUrl('templates/submitMenu.html', {
     scope: $scope
   }).then(function (popover) {
@@ -150,10 +144,6 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
 
   $scope.closePopover = function () {
     $scope.popover.hide();
-  };
-
-  $scope.change = function () {
-
   };
 
   $scope.us = {};

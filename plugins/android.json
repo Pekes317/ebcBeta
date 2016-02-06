@@ -13,6 +13,12 @@
         "com.mohamnag.inappbilling": {
             "PACKAGE_NAME": "com.ionicframework.ebcbeta"
         },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ionicframework.ebcbeta"
         },
@@ -56,9 +62,6 @@
             "PACKAGE_NAME": "com.ionicframework.ebcbeta"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
-        },
-        "cordova-plugin-appavailability": {
             "PACKAGE_NAME": "com.ionicframework.ebcbeta"
         }
     },
