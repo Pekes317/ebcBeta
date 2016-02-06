@@ -57,6 +57,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.ebcbeta"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.ionicframework.ebcbeta"
         }
     },
     "dependent_plugins": {}

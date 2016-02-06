@@ -100,4 +100,11 @@
   <plugin name="cordova-sms-plugin" source="npm" spec="~0.1.6" />
   <plugin name="cordova-plugin-email" source="npm" spec="~1.0.0" />
   <plugin name="com.mohamnag.inappbilling" source="pgb" spec="~0.0.3" />
+  <plugin name="cordova-plugin-appavailability" src="https://github.com/ohh2ahh/AppAvailability.git" version="0.4.2" />
+  <preference name="Fullscreen" value="True" />
+  <preference name="KeepRunning" value="True" />
+  <preference name="ShowTitle" value="True" />
+  <preference name="InAppBrowserStorageEnabled" value="True" />
+  <preference name="SuppressesIncrementalRendering" value="True" />
+
 </widget>
