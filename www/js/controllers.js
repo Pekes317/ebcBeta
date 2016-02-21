@@ -55,13 +55,13 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
   };
 
   $scope.sampleCard = {
-    svg: 'http://ebc.beezleeart.com/docs/samples/cory.svg',
+    svg: 'http://goo.gl/m85U5k',
     img: 'https://goo.gl/8gRvkX'
   };
 
   $scope.sampleFly = {
-    svg: 'http://ebc.beezleeart.com/docs/samples/chucky.svg',
-    img: 'https://goo.gl/UnPn5u'
+    svg: 'http://goo.gl/j76WmT',
+    img: 'https://goo.gl/rfFyT4'
   };
 
   $scope.sampleMsg = function (index) {
