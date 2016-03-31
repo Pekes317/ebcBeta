@@ -61,7 +61,7 @@ angular.module('ebc.controllers', ['backand', 'ngCookies', 'ionic-material'])
 
   $scope.sampleFly = {
     svg: 'http://goo.gl/j76WmT',
-    img: 'https://goo.gl/rfFyT4'
+    img: 'https://goo.gl/wWFoJ7'
   };
 
   $scope.sampleMsg = function (index) {
